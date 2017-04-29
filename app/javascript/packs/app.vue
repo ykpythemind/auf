@@ -1,7 +1,7 @@
-<template>
-  <div id="app">
-    <p>{{ message }}</p>
-  </div>
+<template lang="jade">
+  div#app
+    p.
+      {{message}}
 </template>
 
 <script>
