@@ -2,7 +2,6 @@ class AudiosController < ApplicationController
   before_action :set_audio, only: [:show, :edit, :update, :destroy]
 
   def index
-    render json: {title: 'jsonが返っている'}
   end
 
   def show
