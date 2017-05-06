@@ -1,0 +1,30 @@
+{
+  "compilerOptions": {
+    "module": "es2015",
+    "moduleResolution": "node",
+    "target": "es5",
+    "allowSyntheticDefaultImports": true,
+    "lib": [
+      "es5",
+      "dom",
+      "es2015.promise"
+    ],
+    "strictNullChecks": true,
+    "alwaysStrict": true,
+    "noEmitHelpers": true,
+    "importHelpers": true,
+    "sourceMap": false,
+    "experimentalDecorators": true,
+    "noImplicitAny": false,
+    "noImplicitThis": true,
+    "removeComments": true,
+    "suppressImplicitAnyIndexErrors": true,
+    "emitDecoratorMetadata": true,
+    "baseUrl": ".",
+    "paths": { "tslib": ["../vendor/tslib/tslib.d.ts"] }
+  },
+  "exclude": [
+    "node_modules",
+    "app/javascript/packs/template.d.ts"
+  ]
+}

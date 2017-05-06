@@ -1,7 +1,17 @@
-import Audio from './audios/index.vue';
-import Upload from './uploads/index.vue';
-
-export default [
-    {name: 'Audio', path: '/', component: Audio},
-    {name: 'upload', path: '/upload', component: Upload}
-];
+var Router = (function () {
+    function Router() {
+    }
+    Object.defineProperty(Router, "map", {
+        get: function () {
+            return {
+                '/': {
+                    component: '<h1>Hello World!!!</h1>'
+                }
+            };
+        },
+        enumerable: true,
+        configurable: true
+    });
+    return Router;
+}());
+export default Router;

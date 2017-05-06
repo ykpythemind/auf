@@ -1,23 +1,17 @@
 import Vue from 'vue';
-import Router from 'vue-router';
-import App from './App.vue';
-import routes from './routes';
-
-Vue.use(Router);
-
-// TODO dotenv入れて環境分ける
-// if(process.env.NODE_ENV !== 'production') {
-//     Vue.config.devtools = true;
-// }
-
-const router = new Router({
+import VueRouter from 'vue-router';
+import VueResource from 'vue-resource';
+import App from './App';
+Vue.use(VueRouter);
+Vue.use(VueResource);
+var router = new VueRouter({
     mode: 'history',
-    routes
+    routes: [
+        { path: '/', component: App }
+    ],
 });
-
 document.body.appendChild(document.createElement('app'));
-
-const app = new Vue({
-        router,
-        render: h => h(App)
+var app = new Vue({
+    router: router,
+    render: function (h) { return h(App); }
 }).$mount('app');

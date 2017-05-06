@@ -15,7 +15,7 @@ module.exports = merge(sharedConfig, {
     new CompressionPlugin({
       asset: '[path].gz[query]',
       algorithm: 'gzip',
-      test: /\.(js|css|svg|eot|ttf|woff|woff2)$/
+      test: /\.(ts|js|css|svg|eot|ttf|woff|woff2)$/
     })
   ]
 })
