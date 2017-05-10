@@ -15,14 +15,17 @@ const extensionGlob = `**/*{${paths.extensions.join(',')}}*`
 const packPaths = sync(join(paths.source, paths.entry, extensionGlob))
 
 module.exports = {
-  entry: packPaths.reduce(
-    (map, entry) => {
-      const localMap = map
-      const namespace = relative(join(paths.source, paths.entry), dirname(entry))
-      localMap[join(namespace, basename(entry, extname(entry)))] = resolve(entry)
-      return localMap
-    }, {}
-  ),
+  // entry: packPaths.reduce(
+  //   (map, entry) => {
+  //     const localMap = map
+  //     const namespace = relative(join(paths.source, paths.entry), dirname(entry))
+  //     localMap[join(namespace, basename(entry, extname(entry)))] = resolve(entry)
+  //     return localMap
+  //   }, {}
+  // ),
+  entry: {
+    app: resolve(join(paths.source, paths.entry, 'index.js'))
+  },
 
   output: {
     filename: '[name].js',
