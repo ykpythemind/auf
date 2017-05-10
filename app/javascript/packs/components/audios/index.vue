@@ -1,4 +1,4 @@
-<template lang="jade">
+<template lang="pug">
     div
         h1= title
         form(method="post", enctype="multipart/form-data", action="./upload")

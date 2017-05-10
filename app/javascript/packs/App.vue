@@ -1,4 +1,4 @@
-<template lang="jade">
+<template lang="pug">
     div
         div#header
             <router-link to="/">
