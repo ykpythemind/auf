@@ -1,18 +1,21 @@
 <template>
     <div>
-        <Audio></Audio>
+        <Audios></Audios>
         <div>
-            <h2>いーえいいいいい</h2>
+            <h2 v-on:click='getTest("bbbbb")'>{{message}}</h2>
         </div>
     </div>
 </template>
 
 <script>
-    import Audio from '../../components/audios/index.vue';
+    import Audios from '../../components/audios/index.vue';
+    import { mapActions, mapGetters } from 'vuex';
     export default {
-        name: 'audio',
+        name: 'audios',
         components: {
-            Audio
-        }
+            Audios
+        },
+        methods: mapActions(['getTest']),
+        computed: mapGetters(['message'])
     }
 </script>

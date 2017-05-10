@@ -1,8 +1,9 @@
 <template lang="jade">
     div
         div#header
-            a(href='./')
-                img(src='/images/audiofrag.png')
+            <router-link to="/">
+            img(src='./assets/images/audiofrag.png')
+            </router-link>
             div#nav
                 <router-link to="/">Home</router-link>
                 <router-link to="/upload">upload</router-link>

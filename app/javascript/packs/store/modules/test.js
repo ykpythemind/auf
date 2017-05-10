@@ -1,14 +1,12 @@
 import * as types from '../types';
 
 const state = {
-    test: {
-        name: 'aaaaaa'
-    }
+    message: 'aaaaa'
 };
 
 const mutations = {
-    [types.TEST] (state, test) {
-        state.test = test
+    [types.TEST] (state, message) {
+        state.message = message
     }
 };
 

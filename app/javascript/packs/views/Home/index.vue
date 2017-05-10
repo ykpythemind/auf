@@ -1,13 +1,13 @@
 <template>
     <div class="view-home">
-        <Audio></Audio>
+        <Audios></Audios>
     </div>
 </template>
 
 <script>
     export default {
         components: {
-            Audio: require('./home.vue')
+            Audios: require('./home.vue')
         }
     }
 </script>

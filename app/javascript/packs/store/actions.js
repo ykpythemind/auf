@@ -1,11 +1,7 @@
 import * as types from './types';
 
-export function toast ({commit, state}, message) {
-    commit(types.TOAST_MESSAGE, message)
-    // var timer = setTimeout(() => {
-    //     commit(types.TOAST_MESSAGE, '')
-    //     clearTimeout(timer)
-    // }, 3000)
+export function getTest ({commit, state}, message) {
+    commit(types.TEST, message)
 }
 
 // export function getAccount ({commit, state}, params) {

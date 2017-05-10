@@ -2,7 +2,7 @@ import Vue from 'vue';
 import Vuex from 'vuex';
 import createLogger from 'vuex/dist/logger';
 import * as actions from './actions';
-// import * as getters from './getters'
+import * as getters from './getters'
 
 // import account from 'src/vuex/modules/account'
 import test from './modules/test';
@@ -15,7 +15,7 @@ const debug = process.env.NODE_ENV !== 'production';
 
 const store = new Vuex.Store({
     actions,
-    // getters,
+    getters,
     modules: {
         // account,
         test

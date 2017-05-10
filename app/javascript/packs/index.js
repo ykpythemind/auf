@@ -3,7 +3,7 @@ import Router from 'vue-router';
 import App from './App.vue';
 import router from './router';
 
-import store from './vuex';
+import store from './store';
 import VuexRouterSync from 'vuex-router-sync';
 VuexRouterSync.sync(store, router);
 
@@ -11,7 +11,6 @@ VuexRouterSync.sync(store, router);
 // if(process.env.NODE_ENV !== 'production') {
 //     Vue.config.devtools = true;
 // }
-
 
 document.body.appendChild(document.createElement('app'));
 /* eslint-disable no-new */
