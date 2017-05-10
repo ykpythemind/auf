@@ -1,10 +1,10 @@
 import Vue from 'vue';
-import Router from 'vue-router';
+import VuexRouterSync from 'vuex-router-sync';
+
 import App from './App.vue';
 import router from './router';
-
 import store from './store';
-import VuexRouterSync from 'vuex-router-sync';
+
 VuexRouterSync.sync(store, router);
 
 // TODO dotenv入れて環境分ける
@@ -15,7 +15,7 @@ VuexRouterSync.sync(store, router);
 document.body.appendChild(document.createElement('app'));
 /* eslint-disable no-new */
 new Vue({
-    router,
-    store,
-    render: h => h(App)
+  router,
+  store,
+  render: h => h(App)
 }).$mount('app');

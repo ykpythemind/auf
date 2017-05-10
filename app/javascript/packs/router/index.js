@@ -6,22 +6,21 @@ import routes from './routes';
 Vue.use(VueRouter);
 
 const router = new VueRouter({
-    linkActiveClass: 'active',
-    mode: 'history',
-    base: __dirname,
-    routes: [
-
-        {
-            path: '/app',
-            alias: '/',
-            component: resolve => require(['../App.vue'], resolve),
-            children: routes
-        },
-        {
-            path: '*',
-            redirect: '/'
-        }
-    ]
+  linkActiveClass: 'active',
+  mode: 'history',
+  base: __dirname,
+  routes: [
+    {
+      path: '/app',
+      alias: '/',
+      component: resolve => require(['../App.vue'], resolve),
+      children: routes
+    },
+    {
+      path: '*',
+      redirect: '/'
+    }
+  ]
 });
 //
 // router.beforeEach((to, from, next) => {
@@ -49,4 +48,4 @@ const router = new VueRouter({
 
 Vue.router = router;
 
-export default router
+export default router;

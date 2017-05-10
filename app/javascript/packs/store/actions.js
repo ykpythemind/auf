@@ -1,7 +1,7 @@
 import * as types from './types';
 
-export function getTest ({commit, state}, message) {
-    commit(types.TEST, message)
+export function getTest ({ commit }, message) {
+  commit(types.TEST, message);
 }
 
 // export function getAccount ({commit, state}, params) {

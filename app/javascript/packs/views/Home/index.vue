@@ -1,13 +1,12 @@
-<template>
-    <div class="view-home">
-        <Audios></Audios>
-    </div>
+<template lang="pug">
+  div.view-home
+    Audios
 </template>
 
 <script>
-    export default {
-        components: {
-            Audios: require('./home.vue')
-        }
+  export default {
+    components: {
+      Audios: require('./home.vue')
     }
+  }
 </script>

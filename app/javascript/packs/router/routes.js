@@ -1,15 +1,15 @@
 const routes = [
-    {
-        path: '',
-        component: resolve => require(['../views/Home/index.vue'], resolve)
+  {
+    path: '',
+    component: resolve => require(['../views/Home/index.vue'], resolve)
+  },
+  {
+    path: '/upload',
+    meta: {
+      requiresAuth: true
     },
-    {
-        path: '/upload',
-        meta: {
-            requiresAuth: true
-        },
-        component: resolve => require(['../views/Upload/index.vue'], resolve)
-    }
+    component: resolve => require(['../views/Upload/index.vue'], resolve)
+  }
 ];
 
-export default routes
+export default routes;

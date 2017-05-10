@@ -1,3 +1,3 @@
 export const message = (state) => {
-    return state.test.message
+  return state.test.message;
 };
