@@ -4,11 +4,9 @@
 </template>
 
 <script>
-  import Upload from '../../components/uploads/index.vue';
   export default {
-    name: 'upload',
     components: {
-      Upload
+      Upload: require('./upload.vue')
     }
   }
 </script>

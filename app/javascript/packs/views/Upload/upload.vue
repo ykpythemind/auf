@@ -2,7 +2,7 @@
   div
     Upload
     div
-      h2. ダミーテキスト
+      h2 ダミーテキスト
 </template>
 
 <script>

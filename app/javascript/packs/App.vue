@@ -1,16 +1,17 @@
 <template lang="pug">
   div
     div#header
-      <router-link to="/">
+      router-link(to="/")
         img(src='./assets/images/audiofrag.png')
-      </router-link>
       div#nav
-        <router-link to="/">Home</router-link>
-        <router-link to="/upload">upload</router-link>
+        li
+          router-link(to="/") Home
+        li
+          router-link(to="/upload") Upload
       div.clearfix
 
     div#wrapContent
-      <router-view></router-view>
+      router-view
 </template>
 
 <script>
