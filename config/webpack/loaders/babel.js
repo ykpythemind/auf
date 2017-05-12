@@ -11,7 +11,7 @@ module.exports = {
           }
       },
       {
-          loader: 'eslint-loader',
+          loader: 'eslint-loader'
       }
   ]
 }

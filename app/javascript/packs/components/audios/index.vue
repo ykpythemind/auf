@@ -1,5 +1,5 @@
 <template lang="pug">
-  div.test
+  div.wrapAudios
     h1 titletitle
     form(method="post", enctype="multipart/form-data", action="./upload")
       input(type="file", name="file_to_upload")

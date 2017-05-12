@@ -6,7 +6,7 @@ module.exports = function(config) {
 
   config.set({
 
-    basePath: '../../../../../../',
+    // basePath: '../../../../../../',
 
     // frameworks to use
     // available frameworks: https://npmjs.org/browse/keyword/karma-adapter
@@ -15,9 +15,9 @@ module.exports = function(config) {
 
     // list of files / patterns to load in the browser
     files: [
-      './index.js',
-      'app/javascript/test/*_test.js',
-      {pattern: 'public/packs/*.png', watched: false, included: false, served: true}
+      './index.js'
+      // 'app/javascript/test/*_test.js',
+      // {pattern: 'public/packs/*.png', watched: false, included: false, served: true}
     ],
 
 
@@ -29,8 +29,7 @@ module.exports = function(config) {
     // preprocess matching files before serving them to the browser
     // available preprocessors: https://npmjs.org/browse/keyword/karma-preprocessor
     preprocessors: {
-      'app/javascript/test/*_test.js': ['webpack', 'sourcemap'],
-      'app/javascript/test/**/*_test.js': ['webpack', 'sourcemap']
+      './index.js': ['webpack', 'sourcemap']
     },
 
     // test results reporter to use
@@ -68,16 +67,16 @@ module.exports = function(config) {
     // Concurrency level
     // how many browser should be started simultaneous
     concurrency: Infinity,
-    //
-    proxies: {
-      '/static': 'http://gstatic.com',
-      '/web': 'http://localhost:9000',
-      '/public/packs/': 'http://localhost:8000/packs/images/',
-      '/proxyfied': {
-        'target': 'http://localhost:3000',
-        'changeOrigin': true
-      }
-    },
+    // //
+    // proxies: {
+    //   '/static': 'http://gstatic.com',
+    //   '/web': 'http://localhost:9000',
+    //   '/public/packs/': 'http://localhost:8000/packs/images/',
+    //   '/proxyfied': {
+    //     'target': 'http://localhost:3000',
+    //     'changeOrigin': true
+    //   }
+    // },
 
     webpack: {
       module: webpackConfig.module
@@ -86,5 +85,12 @@ module.exports = function(config) {
     webpackMiddleware: {
       noInfo: true
     }
+    // coverageReporter: {
+    //   dir: './coverage',
+    //   reporters: [
+    //     { type: 'lcov', subdir: '.' },
+    //     { type: 'text-summary' }
+    //   ]
+    // }
   })
 };
