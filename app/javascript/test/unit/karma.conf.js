@@ -5,7 +5,6 @@ module.exports = function(config) {
   'use strict';
 
   config.set({
-
     // basePath: '../../../../../../',
 
     // frameworks to use
@@ -16,15 +15,12 @@ module.exports = function(config) {
     // list of files / patterns to load in the browser
     files: [
       './index.js'
-      // 'app/javascript/test/*_test.js',
-      // {pattern: 'public/packs/*.png', watched: false, included: false, served: true}
     ],
 
 
     // list of files to exclude
     exclude: [
     ],
-
 
     // preprocess matching files before serving them to the browser
     // available preprocessors: https://npmjs.org/browse/keyword/karma-preprocessor
