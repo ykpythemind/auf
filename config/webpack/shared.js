@@ -46,8 +46,7 @@ module.exports = {
   resolve: {
     extensions: paths.extensions,
     alias: {
-      'vue': 'vue/dist/vue.common.js',
-      '@': resolve(join(paths.source, paths.entry))
+      'vue': 'vue/dist/vue.common.js'
     },
     modules: [
       resolve(paths.source),
