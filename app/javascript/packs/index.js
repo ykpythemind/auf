@@ -1,23 +1,21 @@
 import Vue from 'vue';
-import Router from 'vue-router';
-import App from './App.vue';
-import routes from './routes';
+import VuexRouterSync from 'vuex-router-sync';
 
-Vue.use(Router);
+import App from './App.vue';
+import router from './router';
+import store from './store';
+
+VuexRouterSync.sync(store, router);
 
 // TODO dotenv入れて環境分ける
 // if(process.env.NODE_ENV !== 'production') {
 //     Vue.config.devtools = true;
 // }
 
-const router = new Router({
-    mode: 'history',
-    routes
-});
-
 document.body.appendChild(document.createElement('app'));
-
-const app = new Vue({
-        router,
-        render: h => h(App)
+/* eslint-disable no-new */
+new Vue({
+  router,
+  store,
+  render: h => h(App)
 }).$mount('app');

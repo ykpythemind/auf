@@ -9,7 +9,7 @@ module.exports = {
         sass: 'vue-style-loader!css-loader!postcss-loader!sass-loader?indentedSyntax'
     },
     presets: [
-        ['es2015']
+        ['es2015', 'stage-2']
     ]
   }
 }
