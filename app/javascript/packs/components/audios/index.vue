@@ -1,6 +1,6 @@
 <template lang="pug">
-  div
-    h1= title
+  div.test
+    h1 titletitle
     form(method="post", enctype="multipart/form-data", action="./upload")
       input(type="file", name="file_to_upload")
       div
@@ -14,6 +14,7 @@
 
 <script>
   export default {
+    name: 'audios',
     data () {
       return {
         msg: 'This is Upload2!!',
