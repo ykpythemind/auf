@@ -7,11 +7,17 @@
 
 `yarn`
 
-### サーバー起動前にVueファイルをbuildしたいとき
+### Vueファイル更新時に都度buildしたい場合
 
-`bin/webpack`  
+`yarn run webpack-watch`
 
 → public/packs以下に生成される
+
+### Vueファイルを1度だけbuildしたいとき
+
+`bin/webpack`
+
+→ 同様にpublic/packs以下に生成される
 
 ### サーバー起動するとき
 
@@ -21,10 +27,13 @@
 
 ### Vueファイルの変更を監視しながらサーバーを起動する
 
-`bin/server`
+`bin/server` もしくは `yarn run server-progress`
 
 を起動してhttp://localhost:5000
 
+### vueのユニットテストをするとき
+
+`yarn run unit`
 
 
 
