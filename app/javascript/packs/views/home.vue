@@ -1,18 +1,19 @@
 <template lang="pug">
   div
-    Audios
+    h1 トップページです:)
+    UploadForm
     div
       h2(v-on:click='getTest("bbbbb")')
         | {{message}}
 </template>
 
 <script>
-  import Audios from '../../components/audios/index.vue';
+  import UploadForm from '../components/uploadform.vue';
   import { mapActions, mapGetters } from 'vuex';
   export default {
     name: 'audios',
     components: {
-      Audios
+      UploadForm
     },
     methods: mapActions(['getTest']),
     computed: mapGetters(['message'])

@@ -17,7 +17,7 @@
     name: 'audios',
     data () {
       return {
-        msg: 'This is Upload2!!',
+        msg: 'This is Upload2!!!',
       }
     }
   }
