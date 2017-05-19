@@ -1,3 +1,5 @@
+const path = require('path');
+
 module.exports = {
   test: /\.js(\.erb)?$/,
   exclude: /node_modules/,
@@ -11,7 +13,12 @@ module.exports = {
           }
       },
       {
-          loader: 'eslint-loader'
+          loader: 'eslint-loader',
+          query: {
+            enforce: 'pre',
+            configFile: path.resolve('.eslintrc'),
+            failOnError: true
+          }
       }
   ]
-}
+};
