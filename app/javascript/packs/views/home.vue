@@ -8,8 +8,10 @@
 </template>
 
 <script>
-  import UploadForm from '../components/uploadform.vue';
   import { mapActions, mapGetters } from 'vuex';
+
+  import UploadForm from '../components/uploadform.vue';
+
   export default {
     name: 'audios',
     components: {
