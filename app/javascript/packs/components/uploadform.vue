@@ -35,7 +35,8 @@
         audio: {
           title: '',
           filename: '',
-          description: ''
+          description: '',
+          user_id: 1
         }
       }
     },

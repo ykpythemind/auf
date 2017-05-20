@@ -1,6 +1,7 @@
 {
   "extends": "vue",
   "rules": {
-    "semi": "off"
+    "semi": "off",
+    "camelcase": [2, {"properties": "never"}]
   }
 }
