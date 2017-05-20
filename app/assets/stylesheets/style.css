@@ -37,7 +37,7 @@ ul,li   {
 }
 
 nav .ui-icon {
-    margin-right: 40px;
+    margin-right: 20px;
     font-size: 30px;
     color: #ffffff;
 }
@@ -46,14 +46,12 @@ nav .ui-icon {
     float: left;
     text-align: center;
     font-weight: bold;
-    /*!* border-left: solid 1px #FFF;   *!*/
     color: #FFF;
     font-size:16px;
 }
 
 #nav li a{
     display: block;
-    /*!* width: 150px;   *!*/
     padding: 5px 10px;
     text-decoration: none;
     color: #FFF;
@@ -95,27 +93,27 @@ nav .ui-icon {
     margin-top:10px;
 }
 
-ul,li   {  
-    margin:0;  
-    padding:0;  
-    list-style: none;  
-}  
+ul,li   {
+    margin:0;
+    padding:0;
+    list-style: none;
+}
 
 #nav li{
-    float: left;  
-    text-align: center;  
-    font-weight: bold;  
+    float: left;
+    text-align: center;
+    font-weight: bold;
     !* border-left: solid 1px #FFF;   *!
-    color: #FFF;  
-    font-size:16px; 
+    color: #FFF;
+    font-size:16px;
 }
 
 #nav li a{
-    display: block;  
+    display: block;
     !* width: 150px;   *!
-    padding: 5px 10px;  
-    text-decoration: none;  
-    color: #FFF;  
+    padding: 5px 10px;
+    text-decoration: none;
+    color: #FFF;
 }
 
 .clearfix:after {

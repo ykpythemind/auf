@@ -4,7 +4,7 @@
       ui-toolbar(title="Audiofrag" type="colored" textColor="white" @nav-icon-click="linkToHome")
         nav(slot="actions")
           router-link(to="/")
-            ui-icon home
+            ui-icon account_box
           router-link(to="/upload")
             ui-icon file_upload
       div.clearfix
@@ -22,7 +22,7 @@
     },
     methods: {
       linkToHome () {
-        this.$router.push('/upload');
+        this.$router.push('/');
       }
     }
   }
