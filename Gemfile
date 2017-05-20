@@ -22,6 +22,9 @@ gem 'uglifier', '>= 1.3.0'
 #  toolkit for file attachments in Ruby applications.
 gem "shrine"
 
+# S3
+gem "aws-sdk", "~> 2.1"
+
 # Use CoffeeScript for .coffee assets and views
 gem 'coffee-rails', '~> 4.2'
 # Turbolinks makes navigating your web application faster. Read more: https://github.com/turbolinks/turbolinks
