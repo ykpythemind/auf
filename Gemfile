@@ -21,6 +21,7 @@ gem 'uglifier', '>= 1.3.0'
 
 #  toolkit for file attachments in Ruby applications.
 gem "shrine"
+gem "roda"
 
 # S3
 gem "aws-sdk", "~> 2.1"

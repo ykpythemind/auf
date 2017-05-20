@@ -1,0 +1,10 @@
+<% presign = Shrine.storages[:cache].presign(SecureRandom.hex, success_action_redirect: root_path) %>
+<%= presign.url %>
+<%= presign.fields.inspect %>
+<form action="<%= presign.url %>" method="post" enctype="multipart/form-data">
+  <input type="file" name="file">
+  <% presign.fields.each do |name, value| %>
+    <input type="hidden" name="<%= name %>" value="<%= value %>">
+  <% end %>
+  <input type="submit" value="Upload">
+</form>

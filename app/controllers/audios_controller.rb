@@ -5,6 +5,10 @@ class AudiosController < ApplicationController
     @audios = Audio.all
   end
 
+  def testupload
+    @audios = Audio.all
+  end
+
   def show
     # 今は仮にjsonが返ります
     render json: @audio
