@@ -1,10 +1,13 @@
 <template lang="pug">
   div
-    h1 トップページです:)
-    UploadForm
-    div
-      h2(v-on:click='getTest("bbbbb")')
-        | {{message}}
+    div.container
+      div.row
+        div.col-sm-6.col-sm-offset-3
+          h1 トップページです:)
+          UploadForm
+          div
+            h2(v-on:click='getTest("bbbbb")')
+              | {{message}}
 </template>
 
 <script>
