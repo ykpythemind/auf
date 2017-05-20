@@ -22,3 +22,7 @@ doc/
 .secret
 /public/packs
 /node_modules
+
+# TODO: 消したい
+# shrine settings (仮)
+config/initializers/shrine_aws.rb
