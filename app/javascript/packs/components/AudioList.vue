@@ -11,14 +11,13 @@
     components: {
       AudioComponent
     },
-    props: ['audios']
-//    props: {
-//      audios: {
-//        type: Array,
-//        default: () => {
-//          return [];
-//        }
-//      }
-//    }
+    props: {
+      audios: {
+        type: Array,
+        default () {
+          return []
+        }
+      }
+    }
   }
 </script>

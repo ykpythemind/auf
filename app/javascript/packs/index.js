@@ -4,9 +4,6 @@ import KeenUI from 'keen-ui';
 
 import router from './router';
 import store from './store';
-import config from './config';
-
-console.log(JSON.stringify(config));
 
 VuexRouterSync.sync(store, router);
 Vue.use(KeenUI);

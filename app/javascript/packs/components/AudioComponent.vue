@@ -1,19 +1,21 @@
 <template lang="pug">
-  div
-    h2 {{ audio.title }}
-    h2 {{ audio.filename }}
+  .panel.panel-default
+    .panel-heading {{ audio.title }}
+    .panel-body
+      | {{ audio.filename }}
+      | {{ audio.description }}
+      | {{ audio.descuser_idription }}将来的にユーザー名をサーバーからとって置いてここに表示したい
 </template>
 
 <script>
   export default {
-    props: ['audio']
-//    props: {
-//      audio: {
-//        title: String,
-//        filename: String,
-//        description: String,
-//        user_id: Number
-//      }
-//    }
+    props: {
+      audio: {
+        title: String,
+        filename: String,
+        description: String,
+        user_id: Number
+      }
+    }
   }
 </script>
