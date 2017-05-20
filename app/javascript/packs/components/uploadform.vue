@@ -11,7 +11,7 @@
       input(type="text", v-model="audio.filename")
       div
       label comment
-      input(type="text", v-model="audio.comment")
+      input(type="text", v-model="audio.description")
       input(type="submit" @click="onClick").button
 </template>
 
@@ -35,13 +35,23 @@
         audio: {
           title: '',
           filename: '',
-          comment: ''
+          description: ''
         }
       }
     },
     methods: {
       onClick () {
-        console.log('click');
+        $.ajax({
+          url: './upload.json',
+          type: 'POST',
+          data: {
+            audio: this.$data.audio
+          }
+        }).done((res) => {
+          console.log(res);
+        }).fail((res) => {
+          console.log(res);
+        });
       },
       update (e) {
         // タイトルが変更されたとき 例えばこういう処理する
@@ -49,7 +59,7 @@
       }
     },
     mounted () {
-      this.$data.audio.comment = 'Component mounted, and set comment...'
+      this.$data.audio.description = 'Component mounted, and set description...'
     }
   }
 </script>
