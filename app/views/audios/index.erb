@@ -1,1 +1,9 @@
 <router-view><div class="loader"></div></router-view>
+
+<ul>
+  <% @audios.each do |audio| %>
+    <li>
+      <%= audio.title %> ( <%= audio.description %> / <%= audio.filename %>)
+    </li>
+  <% end %>
+</ul>

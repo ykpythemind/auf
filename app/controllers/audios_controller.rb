@@ -2,6 +2,7 @@ class AudiosController < ApplicationController
   before_action :set_audio, only: [:show, :edit, :update, :destroy]
 
   def index
+    @audios = Audio.all
   end
 
   def show
@@ -10,6 +11,7 @@ class AudiosController < ApplicationController
   end
 
   def new
+    @audios = Audio.all
     render :index
   end
 
