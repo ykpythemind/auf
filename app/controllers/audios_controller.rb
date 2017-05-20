@@ -10,7 +10,7 @@ class AudiosController < ApplicationController
   end
 
   def new
-
+    render :index
   end
 
   def create
