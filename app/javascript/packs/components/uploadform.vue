@@ -28,7 +28,7 @@
 
 <script>
   export default {
-    name: 'audios',
+    name: 'uploadform',
     data () {
       return {
         msg: 'This is Upload2!!!',
