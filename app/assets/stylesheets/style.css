@@ -1,12 +1,82 @@
+/******** reset for keen-ui ********/
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 100%;
+}
+
+/******** style ********/
 body {
-  padding: 50px;
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+    padding: 0;
+    margin: 0;
+    font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
 }
 
 a {
-  color: #00B7FF;
+    color: #00B7FF;
 }
 
+.wrapContent {
+    margin: 0 auto;
+    width: 980px;
+}
+
+ul,li   {
+    margin:0;
+    padding:0;
+    list-style: none;
+}
+
+#nav{
+    float: right;
+    margin-top:10px;
+}
+
+nav .ui-icon {
+    margin-right: 40px;
+    font-size: 30px;
+    color: #ffffff;
+}
+
+#nav li{
+    float: left;
+    text-align: center;
+    font-weight: bold;
+    /*!* border-left: solid 1px #FFF;   *!*/
+    color: #FFF;
+    font-size:16px;
+}
+
+#nav li a{
+    display: block;
+    /*!* width: 150px;   *!*/
+    padding: 5px 10px;
+    text-decoration: none;
+    color: #FFF;
+}
+
+@media screen and (min-width:768px) {
+
+}
+
+@media screen and (max-width:767px) {
+.wrapContent {
+    width: auto;
+    padding: 0 40px;
+}
+
+nav .ui-icon {
+    margin-right: 20px;
+}
+
+}
+
+
+/*
 #header{
     position:fixed;
     top:0; left:0;
@@ -35,14 +105,14 @@ ul,li   {
     float: left;  
     text-align: center;  
     font-weight: bold;  
-    /* border-left: solid 1px #FFF;   */
+    !* border-left: solid 1px #FFF;   *!
     color: #FFF;  
     font-size:16px; 
 }
 
 #nav li a{
     display: block;  
-    /* width: 150px;   */
+    !* width: 150px;   *!
     padding: 5px 10px;  
     text-decoration: none;  
     color: #FFF;  
@@ -59,3 +129,4 @@ img{
     height:auto;
 }
 
+*/
