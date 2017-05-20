@@ -2,29 +2,17 @@
   div.wrapAudios
     h1 {{msg}}
     div
-      input(type="file", name="file_to_upload")
       div
-      label title
-      input(type="text", v-model="audio.title" v-on:input="update")
+        ui-fileupload(name="file_to_upload")
       div
-      label filename
-      input(type="text", v-model="audio.filename")
+        ui-textbox(label="Song Name" placeholder="Enter the song's name" v-model="audio.title" v-on:input="update")
       div
-      label comment
-      input(type="text", v-model="audio.description")
-      input(type="submit" @click="onClick").button
+        ui-textbox(label="File name" placeholder="filename" v-model="audio.filename")
+      div
+        ui-textbox(label="Description" placeholder="description of song" v-model="audio.description")
+      div
+        ui-button(buttonType="submit" color="primary" @click="onClick") 送信
 </template>
-
-<style scoped>
-  input {
-    width: 300px;
-    margin-bottom: 25px;
-  }
-  .button {
-    width: 50px;
-    margin: 5px;
-  }
-</style>
 
 <script>
   export default {
@@ -54,9 +42,9 @@
           console.log(res);
         });
       },
-      update (e) {
+      update (value) {
         // タイトルが変更されたとき 例えばこういう処理する
-        this.$data.audio.filename = `${encodeURI(e.target.value)}.mp3`;
+        this.$data.audio.filename = `${encodeURI(value)}.mp3`;
       }
     },
     mounted () {
