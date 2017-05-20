@@ -5,9 +5,6 @@
         div.col-sm-6.col-sm-offset-3
           h1 トップページです:)
           UploadForm
-          div
-            h2(v-on:click='getTest("bbbbb")')
-              | {{message}}
           div(style="margin-top: 60px;")
             AudioList(v-bind:audios="audios")
 </template>
@@ -26,18 +23,16 @@
     },
     data () {
       return {
-//        audios: []
       };
     },
     methods: {
       fetchAfterLoaded () {
         this.fetchAudios()
       },
-      ...mapActions(['getTest', 'fetchAudios'])
+      ...mapActions(['fetchAudios'])
     },
     computed: {
       ...mapGetters({
-        message: 'message',
         audios: 'audios'
       })
     },
