@@ -9,7 +9,7 @@
             h2(v-on:click='getTest("bbbbb")')
               | {{message}}
           div(style="margin-top: 60px;")
-            AudioList(@audios="audios")
+            AudioList(v-bind:audios="audios")
 </template>
 
 <script>
@@ -26,7 +26,7 @@
     },
     data () {
       return {
-        audios: []
+//        audios: []
       };
     },
     methods: {
@@ -38,7 +38,7 @@
     computed: {
       ...mapGetters({
         message: 'message',
-        getAudios: 'fetchAudios'
+        audios: 'audios'
       })
     },
     mounted () {

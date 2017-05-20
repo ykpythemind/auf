@@ -1,21 +1,24 @@
 <template lang="pug">
   div
     div(v-for="audio in audios")
-      Audio(audio)
+      AudioComponent(v-bind:audio="audio")
 </template>
 
 <script>
-  import Audio from './Audio.vue';
+  import AudioComponent from './AudioComponent.vue';
 
   export default {
     components: {
-      Audio
+      AudioComponent
     },
-    props: {
-      audios: {
-        type: Array,
-        default: []
-      }
-    }
+    props: ['audios']
+//    props: {
+//      audios: {
+//        type: Array,
+//        default: () => {
+//          return [];
+//        }
+//      }
+//    }
   }
 </script>
