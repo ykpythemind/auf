@@ -15,6 +15,11 @@ class AudiosController < ApplicationController
     render :index
   end
 
+  def edit
+    @audios = Audio.all
+    render :index
+  end
+
   def create
     @audio = Audio.new(audio_params)
     respond_to do |format|
