@@ -23,7 +23,6 @@
     },
     methods: {
       linkToHome () {
-        console.log('aaaaaaa');
         this.$router.push('/upload');
       }
     }
