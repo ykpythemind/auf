@@ -2,6 +2,7 @@ class AudiosController < ApplicationController
   before_action :set_audio, only: [:show, :edit, :update, :destroy]
 
   def index
+    @audios = Audio.all
   end
 
   def show
@@ -10,19 +11,27 @@ class AudiosController < ApplicationController
   end
 
   def new
+    @audios = Audio.all
+    render :index
+  end
 
+  def edit
+    @audios = Audio.all
+    render :index
   end
 
   def create
     @audio = Audio.new(audio_params)
-
     respond_to do |format|
       if @audio.save
         format.html { redirect_to root_path, notice: '投稿しました' }
-        format.json { render json: @user, status: :created}
+        format.json { render json: @audio, status: :created}
       else
-        format.html { render :new }
-        format.json { render json: @user.errors, status: :unprocessable_entity }
+        @audio.errors.each do |k, v|
+          logger.debug "#{k}, #{v}"
+        end
+        format.html { redirect_to root_path, notice: '失敗しました' }
+        format.json { render json: @audio.errors, status: :unprocessable_entity }
       end
     end
   end

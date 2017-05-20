@@ -2,6 +2,9 @@
 
 ## auf
 
+ユーザー機能は後回しなので、`bundle exec rake db:seed` してね
+
+
 ## コマンドメモ
 ### package.jsonの依存パッケージをインストールしたいとき
 
@@ -21,7 +24,7 @@
 
 ### サーバー起動するとき
 
-`bundle exec rails s` 
+`bundle exec rails s`
 
 を起動してhttp://localhost:3000
 
@@ -34,7 +37,3 @@
 ### vueのユニットテストをするとき
 
 `yarn run unit`
-
-
-
-
