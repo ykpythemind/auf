@@ -1,15 +1,12 @@
 <template lang="pug">
   div#app
     header
-      ui-toolbar(title="Audiofrag" remove-brand-divider="true" brand="book app" type="colored" textColor="white" @nav-icon-click="linkToHome")
-        div#nav
-          ul
-            li
-              ui-icon-button(type="secondary")
-                router-link(to="/") Home
-            li
-              ui-icon-button(type="secondary")
-                router-link(to="/upload") Upload
+      ui-toolbar(title="Audiofrag" type="colored" textColor="white" @nav-icon-click="linkToHome")
+        nav(slot="actions")
+          router-link(to="/")
+            ui-icon home
+          router-link(to="/upload")
+            ui-icon file_upload
       div.clearfix
 
     div.wrapContent

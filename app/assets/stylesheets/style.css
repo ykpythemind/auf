@@ -36,6 +36,12 @@ ul,li   {
     margin-top:10px;
 }
 
+nav .ui-icon {
+    margin-right: 40px;
+    font-size: 30px;
+    color: #ffffff;
+}
+
 #nav li{
     float: left;
     text-align: center;
@@ -51,6 +57,22 @@ ul,li   {
     padding: 5px 10px;
     text-decoration: none;
     color: #FFF;
+}
+
+@media screen and (min-width:768px) {
+
+}
+
+@media screen and (max-width:767px) {
+.wrapContent {
+    width: auto;
+    padding: 0 40px;
+}
+
+nav .ui-icon {
+    margin-right: 20px;
+}
+
 }
 
 
