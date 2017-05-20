@@ -29,7 +29,20 @@
         audios: []
       };
     },
-    methods: mapActions(['getTest']),
-    computed: mapGetters(['message'])
+    methods: {
+      fetchAfterLoaded () {
+        this.fetchAudios()
+      },
+      ...mapActions(['getTest', 'fetchAudios'])
+    },
+    computed: {
+      ...mapGetters({
+        message: 'message',
+        getAudios: 'fetchAudios'
+      })
+    },
+    mounted () {
+      this.fetchAfterLoaded()
+    }
   }
 </script>
