@@ -2,14 +2,15 @@
   div.wrapAudios
     h1 titletitle
     form(method="post", enctype="multipart/form-data", action="./upload")
-      input(type="file", name="file_to_upload")
       div
-      label name
-      input(type="text", name="songname")
+        ui-fileupload(name="file_to_upload")
       div
-      label comment
-      input(type="text", name="comment")
-      input(type="submit")
+        ui-textbox(label="Song Name" name="songname" placeholder="Enter the song's name" v-model="uploadBody.songname")
+      div
+      label
+        ui-textbox(label="Comment" name="comment" placeholder="comment of song" v-model="uploadBody.comment")
+      div
+        ui-button(buttonType="submit" color="primary") 送信
 </template>
 
 <script>
@@ -17,7 +18,8 @@
     name: 'audios',
     data () {
       return {
-        msg: 'This is Upload2!!!'
+        msg: 'This is Upload2!!!',
+        uploadBody: {}
       }
     }
   }

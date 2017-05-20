@@ -1,18 +1,18 @@
 <template lang="pug">
   div#app
-    div#header
-      router-link(to="/")
-        img(src='./assets/images/audiofrag.png')
-
-      div#nav
-        ul
-          li
-            router-link(to="/") Home
-          li
-            router-link(to="/upload") Upload
+    header
+      ui-toolbar(title="Audiofrag" remove-brand-divider="true" brand="book app" type="colored" textColor="white" @nav-icon-click="linkToHome")
+        div#nav
+          ul
+            li
+              ui-icon-button(type="secondary")
+                router-link(to="/") Home
+            li
+              ui-icon-button(type="secondary")
+                router-link(to="/upload") Upload
       div.clearfix
 
-    div#wrapContent
+    div.wrapContent
       transition(name="router" mode="out-in")
         router-view.router-view
 </template>
@@ -22,6 +22,12 @@
     data () {
       return {
         loading: false
+      }
+    },
+    methods: {
+      linkToHome () {
+        console.log('aaaaaaa');
+        this.$router.push('/upload');
       }
     }
   }
