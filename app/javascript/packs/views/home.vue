@@ -8,17 +8,26 @@
           div
             h2(v-on:click='getTest("bbbbb")')
               | {{message}}
+          div(style="margin-top: 60px;")
+            AudioList(@audios="audios")
 </template>
 
 <script>
   import { mapActions, mapGetters } from 'vuex';
 
   import UploadForm from '../components/uploadform.vue';
+  import AudioList from '../components/AudioList.vue';
 
   export default {
     name: 'Home',
     components: {
-      UploadForm
+      UploadForm,
+      AudioList
+    },
+    data () {
+      return {
+        audios: []
+      };
     },
     methods: mapActions(['getTest']),
     computed: mapGetters(['message'])

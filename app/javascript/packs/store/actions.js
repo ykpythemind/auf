@@ -4,6 +4,20 @@ export function getTest ({ commit }, message) {
   commit(types.TEST, message);
 }
 
+// export function fetchAudios ({ commit }, audios) {
+//   $.ajax({
+//     url: './upload.json',
+//     type: 'POST',
+//     data: {
+//       audio: this.$data.audio
+//     }
+//   }).done((res) => {
+//     console.log(res);
+//   }).fail((res) => {
+//     console.log(res);
+//   });
+// }
+
 // export function getAccount ({commit, state}, params) {
 //     return API.Account.get(params)
 //         .then((response) => {
