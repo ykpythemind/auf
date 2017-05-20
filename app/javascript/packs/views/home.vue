@@ -16,7 +16,7 @@
   import UploadForm from '../components/uploadform.vue';
 
   export default {
-    name: 'audios',
+    name: 'Home',
     components: {
       UploadForm
     },

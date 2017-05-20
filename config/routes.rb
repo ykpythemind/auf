@@ -3,4 +3,5 @@ Rails.application.routes.draw do
   root to: 'audios#index'
   resources :audios
   get 'upload/', to: 'audios#new', as: 'upload'
+  post 'upload/', to: 'audios#create', as: 'upload_data'
 end
