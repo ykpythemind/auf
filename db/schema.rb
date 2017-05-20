@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170429064937) do
+ActiveRecord::Schema.define(version: 20170520140117) do
 
   create_table "audios", force: :cascade do |t|
     t.integer "user_id"
@@ -21,6 +21,7 @@ ActiveRecord::Schema.define(version: 20170429064937) do
     t.integer "length"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.text "frag_data"
   end
 
   create_table "users", force: :cascade do |t|
