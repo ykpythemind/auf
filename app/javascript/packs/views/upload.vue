@@ -1,8 +1,11 @@
 <template lang="pug">
   div
-    UploadForm
-    div
-      h2 ダミーテキストaaaaas
+    div.container
+      div.row
+        div.col-sm-6
+          UploadForm
+          div
+            h2 ダミーテキストaaaaas
 </template>
 
 <script>

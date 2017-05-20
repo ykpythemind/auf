@@ -9,9 +9,8 @@
             ui-icon file_upload
       div.clearfix
 
-    div.wrapContent
-      transition(name="router" mode="out-in")
-        router-view.router-view
+    transition(name="router" mode="out-in")
+      router-view.router-view
 </template>
 
 <script>
