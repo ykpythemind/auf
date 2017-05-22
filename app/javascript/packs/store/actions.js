@@ -1,7 +1,15 @@
 import * as types from './types';
+import config from '../config';
 
-export function getTest ({ commit }, message) {
-  commit(types.TEST, message);
+export function fetchAudios ({ commit }) {
+  $.ajax({
+    url: `${config.apiurl}/audios.json`,
+    type: 'GET'
+  }).done((res) => {
+    commit(types.FETCH_AUDIOS, res);
+  }).fail((res) => {
+    console.log(res);
+  });
 }
 
 // export function getAccount ({commit, state}, params) {

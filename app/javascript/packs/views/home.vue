@@ -5,22 +5,39 @@
         div.col-sm-6.col-sm-offset-3
           h1 トップページです:)
           UploadForm
-          div
-            h2(v-on:click='getTest("bbbbb")')
-              | {{message}}
+          div(style="margin-top: 60px;")
+            AudioList(v-bind:audios="audios")
 </template>
 
 <script>
   import { mapActions, mapGetters } from 'vuex';
 
   import UploadForm from '../components/uploadform.vue';
+  import AudioList from '../components/AudioList.vue';
 
   export default {
     name: 'Home',
     components: {
-      UploadForm
+      UploadForm,
+      AudioList
     },
-    methods: mapActions(['getTest']),
-    computed: mapGetters(['message'])
+    data () {
+      return {
+      };
+    },
+    methods: {
+      fetchAfterLoaded () {
+        this.fetchAudios()
+      },
+      ...mapActions(['fetchAudios'])
+    },
+    computed: {
+      ...mapGetters({
+        audios: 'audios'
+      })
+    },
+    mounted () {
+      this.fetchAfterLoaded()
+    }
   }
 </script>
