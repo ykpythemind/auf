@@ -3,6 +3,10 @@ class AudiosController < ApplicationController
 
   def index
     @audios = Audio.all
+    respond_to do |format|
+      format.html { render :index }
+      format.json { render json: @audios, status: :ok }
+    end
   end
 
   def show

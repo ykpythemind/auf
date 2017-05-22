@@ -36,6 +36,11 @@ gem 'webpacker', github: 'rails/webpacker'
 # Use bootstrap
 gem 'bootstrap', '~> 4.0.0.alpha6'
 
+# Use tether for using bootstrap's tooltips
+source 'https://rails-assets.org' do
+  gem 'rails-assets-tether', '>= 1.3.3'
+end
+
 # Use jquery
 gem 'jquery-rails'
 
