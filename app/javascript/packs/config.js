@@ -1,16 +1,22 @@
 const readApiUrl = () => {
+  let url = '';
   switch (process.env.NODE_ENV) {
     case 'development':
-      return 'http://localhost:3000';
+      url = 'http://localhost:3000';
+      break;
     case 'staging':
-      return 'http://localhost:3000';
+      url = 'http://localhost:3000';
+      break;
     case 'production':
-      return 'http://localhost:3000';
+      url = 'http://localhost:3000';
+      break;
     case 'test':
-      return 'http://localhost:3000';
+      url = 'http://localhost:3000';
+      break;
     default:
-      return 'http://localhost:3000';
+      url = 'http://localhost:3000';
   }
+  return url;
 };
 
 const config = {
