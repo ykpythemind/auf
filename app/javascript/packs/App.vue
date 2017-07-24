@@ -4,7 +4,7 @@
       ui-toolbar(title="Audiofrag" type="colored" textColor="white" @nav-icon-click="linkToHome")
         nav(slot="actions")
           router-link(to="/")
-            ui-icon account_box
+            ui-icon queue_music
           router-link(to="/upload")
             ui-icon file_upload
       div.clearfix

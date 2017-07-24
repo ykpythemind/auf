@@ -1,6 +1,5 @@
 <template lang="pug">
   div.wrapAudios
-    h2 {{msg}}
     div.formWraper
       div
         ui-fileupload(name="file_to_upload")
@@ -11,7 +10,7 @@
       div
         ui-textbox(label="Description" placeholder="description of song" v-model="audio.description")
       div
-        ui-button(buttonType="submit" color="primary" @click="onClick") 送信
+        ui-button(buttonType="submit" color="primary" @click="uploadAudioFile") 送信
 </template>
 
 <script>
@@ -19,7 +18,6 @@
     name: 'uploadform',
     data () {
       return {
-        msg: 'This is Upload2!!!',
         audio: {
           title: '',
           filename: '',
@@ -29,7 +27,7 @@
       }
     },
     methods: {
-      onClick () {
+      uploadAudioFile () {
         $.ajax({
           url: './upload.json',
           type: 'POST',
@@ -38,6 +36,7 @@
           }
         }).done((res) => {
           console.log(res);
+
         }).fail((res) => {
           console.log(res);
         });
