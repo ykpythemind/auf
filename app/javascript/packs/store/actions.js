@@ -12,6 +12,20 @@ export function fetchAudios ({ commit }) {
   });
 }
 
+export function uploadAudio ({ commit }, audio) {
+  $.ajax({
+    url: `${config.apiurl}/upload.json`,
+    type: 'POST',
+    data: {
+      audio
+    }
+  }).done((res) => {
+    commit(types.UPLOAD_AUDIO, res);
+  }).fail((res) => {
+    console.log(res);
+  });
+}
+
 // export function getAccount ({commit, state}, params) {
 //     return API.Account.get(params)
 //         .then((response) => {

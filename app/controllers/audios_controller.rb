@@ -26,6 +26,7 @@ class AudiosController < ApplicationController
 
   def create
     @audio = Audio.new(audio_params)
+    logger.warn(@audio)
     respond_to do |format|
       if @audio.save
         format.html { redirect_to root_path, notice: '投稿しました' }

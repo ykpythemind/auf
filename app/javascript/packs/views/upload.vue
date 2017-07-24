@@ -7,7 +7,7 @@
 </template>
 
 <script>
-  import UploadForm from '../components/uploadform.vue';
+  import UploadForm from '../components/Uploadform.vue';
 
   export default {
     components: {
