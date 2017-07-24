@@ -1,6 +1,5 @@
 <template lang="pug">
   div.wrapAudios
-    h2 {{msg}}
     div.formWraper
       div
         ui-fileupload(name="file_to_upload")
@@ -19,7 +18,6 @@
     name: 'uploadform',
     data () {
       return {
-        msg: 'This is Upload2!!!',
         audio: {
           title: '',
           filename: '',

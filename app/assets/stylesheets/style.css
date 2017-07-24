@@ -20,6 +20,10 @@ a {
     color: #00B7FF;
 }
 
+header {
+    margin-bottom: 40px;
+}
+
 .wrapContent {
     margin: 0 auto;
     width: 980px;
@@ -71,6 +75,13 @@ nav .ui-icon {
     margin-right: 20px;
 }
 
+}
+
+
+/******* bootstrap overwrite *********/
+
+.card {
+    margin-bottom: 20px;
 }
 
 

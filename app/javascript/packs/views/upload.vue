@@ -4,8 +4,6 @@
       div.row
         div.col-sm-6
           UploadForm
-          div
-            h2 ダミーテキストaaaaas
 </template>
 
 <script>

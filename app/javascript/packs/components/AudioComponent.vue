@@ -1,10 +1,12 @@
 <template lang="pug">
-  .panel.panel-default
-    .panel-heading {{ audio.title }}
-    .panel-body
-      | {{ audio.filename }}
-      | {{ audio.description }}
-      | {{ audio.descuser_idription }}将来的にユーザー名をサーバーからとって置いてここに表示したい
+  .card
+    .card-block
+      h4.card-title {{ audio.title }}
+      h6.card-subtitle.mb-2.text-muted ファイル名 | {{ audio.filename }}
+      p.card-text
+        | {{ audio.description }} 将来的にユーザー名をサーバーからとって置いてここに表示したい
+      router-link.card-link(to="/upload") Upload
+      a.card-link(href='#') Another link
 </template>
 
 <script>

@@ -2,7 +2,7 @@ class AudiosController < ApplicationController
   before_action :set_audio, only: [:show, :edit, :update, :destroy]
 
   def index
-    @audios = Audio.all
+    @audios = Audio.all.reverse_order
     respond_to do |format|
       format.html { render :index }
       format.json { render json: @audios, status: :ok }
