@@ -6,13 +6,13 @@ export function fetchAudios ({ commit }) {
     url: `${config.apiurl}/audios.json`,
     type: 'GET'
   }).done((res) => {
-    commit(types.FETCH_AUDIOS, res);
+    commit(types.FETCH_AUDIOS, { audios: res });
   }).fail((res) => {
     console.log(res);
   });
 }
 
-export function uploadAudio ({ commit }, audio) {
+export function uploadAudio ({ commit }, { audio }) {
   $.ajax({
     url: `${config.apiurl}/upload.json`,
     type: 'POST',
@@ -20,7 +20,7 @@ export function uploadAudio ({ commit }, audio) {
       audio
     }
   }).done((res) => {
-    commit(types.UPLOAD_AUDIO, res);
+    commit(types.UPLOAD_AUDIO, { audio: res });
   }).fail((res) => {
     console.log(res);
   });

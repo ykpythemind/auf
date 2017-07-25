@@ -5,10 +5,10 @@ const state = {
 };
 
 const mutations = {
-  [TYPES.FETCH_AUDIOS] (state, audios) {
+  [TYPES.FETCH_AUDIOS] (state, { audios }) {
     state.audios = audios;
   },
-  [TYPES.UPLOAD_AUDIO] (state, audio) {
+  [TYPES.UPLOAD_AUDIO] (state, { audio }) {
     state.audios.unshift(audio);
   }
 };

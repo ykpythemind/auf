@@ -1,9 +1,9 @@
 import Vue from 'vue';
 import { expect } from 'chai';
 
-import Audios from '../../../../packs/components/Uploadform.vue';
+import Audios from '../../../../packs/components/UploadForm.vue';
 
-describe('Uploadform.vue', () => {
+describe('UploadForm.vue', () => {
   it('should render correct contents', () => {
     const Constructor = Vue.extend(Audios);
     const vm = new Constructor().$mount();

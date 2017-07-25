@@ -17,7 +17,7 @@
   import { mapActions } from 'vuex';
 
   export default {
-    name: 'Uploadform',
+    name: 'UploadForm',
     data () {
       return {
         defaultDescription: 'Component mounted, and set description...',
@@ -32,8 +32,7 @@
     methods: {
       ...mapActions(['uploadAudio']),
       uploadAudioFile (audio) {
-        const q = JSON.parse(JSON.stringify(audio));
-        this.uploadAudio(q);
+        this.uploadAudio({ audio });
         this.audio = {
           title: '',
           filename: '',
@@ -47,7 +46,7 @@
       }
     },
     mounted () {
-      this.$data.audio.description = this.defaultDescription
+      this.$data.audio.description = this.defaultDescription;
     }
   }
 </script>

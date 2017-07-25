@@ -15,7 +15,7 @@
 <script>
   import { mapActions, mapGetters } from 'vuex';
 
-  import UploadForm from '../components/Uploadform.vue';
+  import UploadForm from '../components/UploadForm.vue';
   import AudioList from '../components/AudioList.vue';
 
   export default {
