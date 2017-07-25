@@ -10,14 +10,17 @@
       div
         ui-textbox(label="Description" placeholder="description of song" v-model="audio.description")
       div
-        ui-button(buttonType="submit" color="primary" @click="uploadAudioFile") 送信
+        ui-button(buttonType="submit" color="primary" @click="uploadAudioFile(audio)") 送信
 </template>
 
 <script>
+  import { mapActions } from 'vuex';
+
   export default {
-    name: 'uploadform',
+    name: 'UploadForm',
     data () {
       return {
+        defaultDescription: 'Component mounted, and set description...',
         audio: {
           title: '',
           filename: '',
@@ -27,19 +30,15 @@
       }
     },
     methods: {
-      uploadAudioFile () {
-        $.ajax({
-          url: './upload.json',
-          type: 'POST',
-          data: {
-            audio: this.$data.audio
-          }
-        }).done((res) => {
-          console.log(res);
-
-        }).fail((res) => {
-          console.log(res);
-        });
+      ...mapActions(['uploadAudio']),
+      uploadAudioFile (audio) {
+        this.uploadAudio({ audio });
+        this.audio = {
+          title: '',
+          filename: '',
+          description: this.defaultDescription,
+          user_id: 1
+        };
       },
       update (value) {
         // タイトルが変更されたとき 例えばこういう処理する
@@ -47,7 +46,7 @@
       }
     },
     mounted () {
-      this.$data.audio.description = 'Component mounted, and set description...'
+      this.$data.audio.description = this.defaultDescription;
     }
   }
 </script>
